@@ -74,6 +74,8 @@ body {
 
 .page-header {
   border-bottom: 1px solid var(--border-color);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .logo {
@@ -174,8 +176,9 @@ body {
   margin: 0 auto;
 
   background-color: var(--accent-dark-color);
-  background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/hero-bg-img.jpg);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -221,12 +224,12 @@ body {
   flex-basis: calc((100% - 3 * 24px) / 4);
 }
 
-.principles-list-icon {
-  display: block;
-  width: 264px;
+.principles-list-icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 112px;
   background-color: var(--light-text-color);
-  padding: 24px 100px;
   border-radius: 4px;
   margin-bottom: 8px;
 }
@@ -241,7 +244,7 @@ body {
   margin-bottom: 72px;
 
   font-size: 36px;
-  line-height: 1.11;
+  line-height: 1.1;
   letter-spacing: var(--primary-letter-spacing);
   text-transform: capitalize;
   color: var(--accent-dark-color);
@@ -269,7 +272,7 @@ body {
 }
 
 .ourteam-card-text {
-  padding: 32px 16px;
+  padding: 32px 0;
 }
 
 .social-icons-list {
@@ -277,10 +280,15 @@ body {
   justify-content: center;
 }
 
-.social-icons-link {
-  display: flex;
+.social-icons-list-item {
   width: 40px;
   height: 40px;
+}
+
+.social-icons-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
   background-color: var(--brand-color);
@@ -292,13 +300,23 @@ body {
   background-color: var(--secondary-brand-color);
 }
 
+.social-icons {
+  fill: var(--light-text-color);
+}
+
 /* customers */
+
+.customers-list-item {
+  width: calc((100% - 120px) / 6);
+  height: 88px;
+}
 
 .customers-link {
   display: flex;
-  width: 168px;
-  height: 88px;
-  padding: 16px 32px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   border: 1px solid var(--customers-icon-color);
   color: var(--customers-icon-color);
   border-radius: 4px;
@@ -326,6 +344,7 @@ body {
 
 .footer-container {
   display: flex;
+  align-items: baseline;
   gap: 120px;
 }
 
@@ -421,7 +440,7 @@ body {
 
 .portfolio-list-item:hover .portfolio-card-text,
 .portfolio-list-item:focus .portfolio-card-text {
-  border: 1px solid #f4f4fd;
+  border: 1px solid var(--light-text-color);
   border-top: none;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
