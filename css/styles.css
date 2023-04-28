@@ -438,8 +438,9 @@ body {
   border-right: 1px solid var(--border-color);
 }
 
-.portfolio-list-item:hover .portfolio-card-text,
-.portfolio-list-item:focus .portfolio-card-text {
+.portfolio-list-link:hover .portfolio-card-text,
+.portfolio-list-link:focus .portfolio-card-text {
+  display: block;
   border: 1px solid var(--light-text-color);
   border-top: none;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
